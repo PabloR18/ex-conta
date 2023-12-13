@@ -1,12 +1,11 @@
 package util;
 
-import java.util.Scanner;
-
 public class Conta {
+
 	protected int numeroConta;
 	protected String titular;
 	protected double saldo;
-	protected String tipoDaConta;
+	protected int tipoDaConta;
 
 	public int getNumeroConta() {
 		return numeroConta;
@@ -31,25 +30,25 @@ public class Conta {
 	public void setSaldo(double valor) {
 		this.saldo = valor;
 	}
-	
-	public String getTipoDaConta() {
+
+	public int getTipoDaConta() {
 		return tipoDaConta;
 	}
 
-	public void setTipoDaConta(String tipoDaConta) {
+	public void setTipoDaConta(int tipoDaConta) {
 		this.tipoDaConta = tipoDaConta;
 	}
-	
+
 	// ---------------------------------------------------------------------------
 
 	public void saque(double valor) {
 		double valorSaque = getSaldo() - valor;
 		setSaldo(valorSaque);
 	}
-	
+
 	public void deposito(double valor) {
 		double valorDeposito = getSaldo() + valor;
 		setSaldo(valorDeposito);
 	}
-	
+
 }
